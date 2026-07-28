@@ -57,17 +57,18 @@ body {
 
 .nav-brand {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    align-items: baseline;
+    gap: 0.35rem;
+    flex-wrap: wrap;
 }
 
 .brand-link {
     font-family: var(--font-heading);
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--olive);
     text-decoration: none;
-    line-height: 1.2;
+    line-height: 1;
     transition: opacity 0.3s;
 }
 
@@ -78,9 +79,23 @@ body {
 .brand-for {
     font-family: var(--font-heading);
     font-style: italic;
-    font-size: 1rem;
+    font-weight: 400;
+    font-size: 1.05rem;
     color: var(--olive);
-    margin: 0 0.25rem;
+    line-height: 1;
+}
+
+.brand-chapter {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: var(--olive);
+    opacity: 0.7;
+    margin-left: 0.35rem;
+    padding-left: 0.6rem;
+    border-left: 1px solid rgba(79, 106, 29, 0.35);
+    line-height: 1;
 }
 
 .nav-links {
@@ -149,6 +164,7 @@ body {
     max-width: 1600px;
     margin: 50px auto 0;
     line-height: 0;
+    background: linear-gradient(180deg, rgba(255, 249, 176, 0) 0%, rgba(255, 249, 176, 0.5) 35%, rgba(232, 196, 104, 0.55) 100%);
 }
 
 .hero-skyline svg {
@@ -417,7 +433,7 @@ body {
 
 /* Dark statement banner */
 .banner-dark {
-    background: var(--ink);
+    background: linear-gradient(135deg, var(--brown) 0%, var(--brown-dark) 100%);
     color: #fff;
     padding: 70px 20px;
     text-align: center;
