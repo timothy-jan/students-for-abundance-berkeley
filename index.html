@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Students for Abundance - Berkeley</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rosario:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
@@ -12,8 +15,8 @@
         <div class="nav-container">
             <div class="nav-brand">
                 <a href="./" class="brand-link">Students</a>
-                <a href="./" class="brand-link"><strong>Abundance</strong></a>
                 <span class="brand-for">for</span>
+                <a href="./" class="brand-link">Abundance</a>
             </div>
             <button class="menu-toggle" aria-label="Toggle menu">
                 <span></span>
@@ -21,10 +24,10 @@
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="#who-we-are">Who we are</a></li>
-                <li><a href="#what-we-believe">What we believe</a></li>
-                <li><a href="./chapters.html">Chapters</a></li>
-                <li><a href="#join">Join us</a></li>
+                <li><a href="./" class="active">Home</a></li>
+                <li><a href="what-we-believe.html">What we believe</a></li>
+                <li><a href="who-we-are.html">Who we are</a></li>
+                <li><a href="how-to-get-involved.html">How to get involved</a></li>
             </ul>
         </div>
     </nav>
@@ -34,58 +37,107 @@
         <div class="hero-content">
             <h1 class="hero-title">Students for Abundance</h1>
             <p class="hero-location">Berkeley</p>
-            <p class="hero-tagline">We organize campus chapters across the country to renew institutions and rebuild the American Dream</p>
+            <p class="hero-tagline">Working towards the policies, institutions, and culture we need for a society where everyone has stability, opportunity, and dignity.</p>
             <div class="hero-ctas">
-                <a href="#join" class="btn btn-primary">Join us</a>
-                <a href="#what-we-believe" class="btn btn-secondary">Learn more</a>
+                <a href="how-to-get-involved.html" class="btn btn-primary">Join us</a>
+                <a href="what-we-believe.html" class="btn btn-secondary">Learn more</a>
             </div>
+        </div>
+
+        <!-- Berkeley skyline illustration featuring the Campanile -->
+        <div class="hero-skyline" aria-hidden="true">
+            <svg viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+                <!-- back row: soft distant skyline -->
+                <g fill="#f3d28c">
+                    <rect x="0" y="210" width="100" height="90"/>
+                    <rect x="105" y="180" width="80" height="120"/>
+                    <rect x="190" y="220" width="120" height="80"/>
+                    <rect x="315" y="195" width="90" height="105"/>
+                    <polygon points="1090,240 1140,190 1190,240"/>
+                    <rect x="1090" y="240" width="100" height="60"/>
+                    <rect x="1200" y="210" width="90" height="90"/>
+                    <rect x="1300" y="185" width="70" height="115"/>
+                    <rect x="1375" y="215" width="65" height="85"/>
+                </g>
+
+                <!-- Sather Gate, left of center -->
+                <g fill="#c08a3e">
+                    <rect x="430" y="235" width="14" height="65"/>
+                    <rect x="520" y="235" width="14" height="65"/>
+                    <rect x="424" y="222" width="126" height="14"/>
+                    <circle cx="437" cy="215" r="7"/>
+                    <circle cx="527" cy="215" r="7"/>
+                    <rect x="470" y="222" width="10" height="78"/>
+                </g>
+
+                <!-- Doe Library-style building, right of center -->
+                <g fill="#b8792e">
+                    <rect x="820" y="200" width="230" height="100"/>
+                    <polygon points="812,200 935,145 1058,200"/>
+                    <rect x="850" y="225" width="12" height="75"/>
+                    <rect x="882" y="225" width="12" height="75"/>
+                    <rect x="914" y="225" width="12" height="75"/>
+                    <rect x="946" y="225" width="12" height="75"/>
+                    <rect x="978" y="225" width="12" height="75"/>
+                    <rect x="1010" y="225" width="12" height="75"/>
+                </g>
+
+                <!-- Sather Tower (the Campanile), centerpiece -->
+                <g>
+                    <rect x="655" y="65" width="72" height="235" fill="#9c5f24"/>
+                    <rect x="655" y="105" width="72" height="5" fill="#7a4718"/>
+                    <rect x="655" y="150" width="72" height="5" fill="#7a4718"/>
+                    <rect x="655" y="195" width="72" height="5" fill="#7a4718"/>
+                    <rect x="655" y="240" width="72" height="5" fill="#7a4718"/>
+                    <rect x="671" y="76" width="12" height="26" fill="#7a4718"/>
+                    <rect x="699" y="76" width="12" height="26" fill="#7a4718"/>
+                    <circle cx="691" cy="48" r="17" fill="#fff4a3" stroke="#7a4718" stroke-width="3"/>
+                    <rect x="689.5" y="36" width="3" height="14" fill="#7a4718"/>
+                    <rect x="683" y="46.5" width="16" height="3" fill="#7a4718"/>
+                    <polygon points="649,65 691,10 733,65" fill="#7a4718"/>
+                    <circle cx="691" cy="6" r="5" fill="#7a4718"/>
+                </g>
+            </svg>
         </div>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Problem/Solution Section -->
-        <section class="mission-section">
+        <!-- Who We Are teaser -->
+        <section class="content-section">
             <div class="container">
-                <div class="mission-text">
-                    <p class="highlight-text">After generations of progress, young Americans are falling behind.</p>
+                <h2>Who We Are</h2>
+                <p>Students for Abundance at Berkeley brings together students at UC Berkeley to work towards achieving the policies, institutions, and culture we need to have a society where everyone has stability, opportunity, and dignity. We are a chapter of Students for Abundance, a nationwide coalition of students committed to building this future.</p>
+            </div>
+        </section>
 
-                    <p>We see a nation in decline, with not enough homes, energy, or healthcare to go around and a government that struggles to build more.</p>
-
-                    <p class="highlight-text">It shouldn't be this way.</p>
-
-                    <p>When there's not enough to go around, it can be tempting to hoard opportunity and mistake caution for wisdom. But we must resist those impulses. When the problem is that there isn't enough, the solution is to make more.</p>
-
-                    <p>Students for Abundance is shaping a generation of leaders to advance programs, policies, and infrastructure that expands opportunity.</p>
-
-                    <p class="highlight-text">We'd love for you to join us.</p>
+        <!-- Pillars -->
+        <section class="content-section alt">
+            <div class="container">
+                <h2>What We Do</h2>
+                <div class="pillars-grid">
+                    <div class="pillar">
+                        <h3>Building community</h3>
+                        <p>We bring together students from all backgrounds who are positive-sum, willing to take risks, and focused on outcomes over process.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>Learning</h3>
+                        <p>Through speaker series, debates, reading groups, field trips, and other events, we promote Abundance ideas on campus.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>Doing</h3>
+                        <p>We test and apply these ideas through hands-on projects, including bureaucracy reform efforts.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Who We Are Section -->
-        <section id="who-we-are" class="content-section">
-            <div class="container">
-                <h2>Who We Are</h2>
-                <p>We're Berkeley students working to renew our institutions and rebuild the American Dream. Our chapter organizes students around policies and programs that expand abundance—more homes, energy, healthcare, and opportunity for everyone.</p>
-            </div>
-        </section>
-
-        <!-- What We Believe Section -->
-        <section id="what-we-believe" class="content-section alt">
-            <div class="container">
-                <h2>What We Believe</h2>
-                <p>We believe that abundance is possible. We believe in building more, not redistributing scarcity. We believe young Americans deserve the opportunity to thrive in a nation that's growing and expanding for everyone.</p>
-            </div>
-        </section>
-
-        <!-- Supporters Section -->
+        <!-- Affiliation -->
         <section class="supporters-section">
             <div class="container">
-                <p class="supporters-text">Students for Abundance is supported by</p>
+                <p class="supporters-text">A proud chapter of</p>
                 <div class="supporters-logos">
-                    <a href="https://www.niskanencenter.org/" target="_blank" class="supporter-link">Niskanen Center</a>
-                    <a href="https://www.abundancenetwork.com/" target="_blank" class="supporter-link">Abundance Network</a>
+                    <a href="https://studentsforabundance.org/" target="_blank" class="supporter-link">Students for Abundance</a>
                 </div>
             </div>
         </section>
@@ -95,7 +147,7 @@
             <div class="container">
                 <div class="join-content">
                     <h2>Sign up for updates</h2>
-                    <p class="join-subtitle">Never spam, unsubscribe any time.</p>
+                    <p class="join-subtitle">Join our weekly mailing list and calendar to stay up to date on upcoming events.</p>
                     <form class="email-form" id="email-signup">
                         <input type="email" placeholder="your@email.com" required>
                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -108,12 +160,9 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="copyright">&copy; Students for Abundance 2025</p>
+            <p class="copyright">&copy; Students for Abundance at Berkeley 2025</p>
             <p class="contact-email">
-                <a href="mailto:contact@studentsforabundance.org">contact@studentsforabundance.org</a>
-            </p>
-            <p class="design-credit">
-                Brand and Design by <a href="https://www.connieliu.work/" target="_blank">Connie Liu</a>
+                <a href="mailto:berkeley@studentsforabundance.org">berkeley@studentsforabundance.org</a>
             </p>
         </div>
     </footer>

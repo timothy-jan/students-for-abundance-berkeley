@@ -1,4 +1,19 @@
 /* Reset and Base Styles */
+:root {
+    --cream: #fffef9;
+    --gold-pale: #fffce0;
+    --gold-light: #fff4a3;
+    --gold: #fff9b0;
+    --gold-mid: #e8c468;
+    --gold-deep: #c08a3e;
+    --brown: #9c5f24;
+    --brown-dark: #7a4718;
+    --ink: #1a1a1a;
+    --olive: #4f6a1d;
+    --font-heading: 'Rosario', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,9 +25,9 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+    font-family: var(--font-body);
     line-height: 1.6;
-    color: #222;
+    color: var(--ink);
     background: #fff;
 }
 
@@ -47,10 +62,12 @@ body {
 }
 
 .brand-link {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #000;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--olive);
     text-decoration: none;
+    line-height: 1.2;
     transition: opacity 0.3s;
 }
 
@@ -59,8 +76,10 @@ body {
 }
 
 .brand-for {
-    font-size: 0.9rem;
-    color: #888;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--olive);
     margin: 0 0.25rem;
 }
 
@@ -73,13 +92,19 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #222;
+    color: var(--olive);
+    font-weight: 500;
     font-size: 0.95rem;
-    transition: color 0.3s;
+    letter-spacing: -0.15px;
+    transition: opacity 0.3s;
 }
 
 .nav-links a:hover {
-    color: #666;
+    opacity: 0.6;
+}
+
+.nav-links a.active {
+    font-weight: 700;
 }
 
 .menu-toggle {
@@ -99,37 +124,65 @@ body {
 
 /* Hero Section */
 .hero {
-    background: #f5f5f5;
-    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(60% 45% at 15% 10%, #ffffff 0%, var(--gold-pale) 40%, rgba(255,255,255,0) 100%),
+        radial-gradient(45% 35% at 55% 35%, var(--gold-light) 0%, rgba(255,243,180,0.55) 45%, rgba(255,255,255,0) 100%),
+        radial-gradient(50% 40% at 85% 15%, var(--gold) 0%, rgba(255,255,255,0) 100%),
+        #ffffff;
+    padding: 80px 20px 0;
     text-align: center;
 }
 
 .hero-content {
     max-width: 1000px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-skyline {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1600px;
+    margin: 50px auto 0;
+    line-height: 0;
+}
+
+.hero-skyline svg {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-family: var(--font-heading);
+    font-size: 4rem;
     font-weight: 700;
+    color: var(--olive);
     margin-bottom: 0.5rem;
     letter-spacing: -1px;
 }
 
 .hero-location {
-    font-size: 1.3rem;
-    color: #666;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--olive);
+    opacity: 0.8;
     margin-bottom: 1.5rem;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .hero-tagline {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #444;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--olive);
     max-width: 700px;
     margin: 0 auto 2.5rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .hero-ctas {
@@ -168,7 +221,7 @@ body {
 }
 
 .btn-secondary:hover {
-    background: #f5f5f5;
+    background: var(--gold-pale);
 }
 
 /* Mission Section */
@@ -190,8 +243,10 @@ body {
 }
 
 .highlight-text {
+    font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 1.15rem;
+    font-size: 1.3rem;
+    color: var(--olive);
 }
 
 /* Content Sections */
@@ -205,9 +260,11 @@ body {
 }
 
 .content-section h2 {
-    font-size: 2rem;
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
+    color: var(--olive);
 }
 
 .content-section p {
@@ -238,14 +295,14 @@ body {
 }
 
 .supporter-link {
-    color: #0066cc;
+    color: var(--gold-deep);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
 }
 
 .supporter-link:hover {
-    color: #0052a3;
+    color: var(--brown);
 }
 
 /* Join Section */
@@ -261,9 +318,11 @@ body {
 }
 
 .join-content h2 {
-    font-size: 2rem;
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
     margin-bottom: 0.5rem;
     font-weight: 700;
+    color: var(--olive);
 }
 
 .join-subtitle {
@@ -317,7 +376,7 @@ body {
 }
 
 .contact-email a {
-    color: #0088ff;
+    color: var(--gold-light);
     text-decoration: none;
 }
 
@@ -331,12 +390,167 @@ body {
 }
 
 .design-credit a {
-    color: #0088ff;
+    color: var(--gold-light);
     text-decoration: none;
 }
 
 .design-credit a:hover {
     text-decoration: underline;
+}
+
+/* Sub-page Header */
+.page-header {
+    background:
+        radial-gradient(60% 45% at 15% 10%, #ffffff 0%, var(--gold-pale) 40%, rgba(255,255,255,0) 100%),
+        radial-gradient(45% 35% at 80% 30%, var(--gold-light) 0%, rgba(255,243,180,0.55) 45%, rgba(255,255,255,0) 100%),
+        #ffffff;
+    padding: 70px 20px 60px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--olive);
+}
+
+/* Dark statement banner */
+.banner-dark {
+    background: var(--ink);
+    color: #fff;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.banner-dark h2 {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-weight: 700;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.3;
+}
+
+/* Belief blocks */
+.belief-block {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.belief-block.alt {
+    background: #f9f9f9;
+}
+
+.belief-block .container {
+    max-width: 800px;
+}
+
+.belief-block p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: #333;
+    margin-bottom: 1.25rem;
+}
+
+.belief-block h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--olive);
+    text-align: center;
+    margin: 0.5rem auto 2rem;
+    max-width: 600px;
+    font-weight: 700;
+}
+
+.goals-list {
+    margin-top: 1.5rem;
+}
+
+.goals-list .goal {
+    margin-bottom: 1.5rem;
+}
+
+.goals-list .goal strong {
+    color: var(--olive);
+}
+
+/* Pillars grid (Building community / Learning / Doing) */
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pillar h3 {
+    font-family: var(--font-heading);
+    color: var(--olive);
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.pillar p {
+    font-size: 0.98rem;
+    color: #444;
+    line-height: 1.7;
+}
+
+/* Activity list */
+.activity-list {
+    max-width: 800px;
+    margin: 2rem auto 0;
+    padding-left: 1.25rem;
+}
+
+.activity-list li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+/* Get Involved blocks */
+.involve-block {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+}
+
+.involve-block h3 {
+    font-family: var(--font-heading);
+    color: var(--olive);
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.involve-block p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.involve-block a {
+    color: var(--gold-deep);
+    font-weight: 600;
+}
+
+.contact-note {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.contact-note a {
+    color: var(--gold-deep);
+    font-weight: 600;
 }
 
 /* Responsive */
@@ -393,5 +607,26 @@ body {
 
     .content-section h2 {
         font-size: 1.75rem;
+    }
+
+    .hero-skyline {
+        margin-top: 30px;
+    }
+
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .banner-dark h2 {
+        font-size: 1.7rem;
+    }
+
+    .belief-block h2 {
+        font-size: 1.6rem;
+    }
+
+    .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
     }
 }
