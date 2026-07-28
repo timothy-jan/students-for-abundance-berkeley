@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Students for Abundance - Berkeley Chapter</title>
+    <title>Students for Abundance - Berkeley</title>
     <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="./">Students for Abundance</a>
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="./" class="brand-link">Students</a>
+                <a href="./" class="brand-link"><strong>Abundance</strong></a>
+                <span class="brand-for">for</span>
             </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="#who-we-are">Who we are</a></li>
                 <li><a href="#what-we-believe">What we believe</a></li>
+                <li><a href="./chapters.html">Chapters</a></li>
                 <li><a href="#join">Join us</a></li>
             </ul>
         </div>
@@ -23,50 +31,90 @@
 
     <!-- Hero Section -->
     <header class="hero">
-        <div class="container">
-            <h1>Students for Abundance</h1>
-            <p>Berkeley Chapter</p>
-            <p class="tagline">We organize students to renew institutions and rebuild the American Dream</p>
-            <a href="#join" class="cta-button">Join us</a>
+        <div class="hero-content">
+            <h1 class="hero-title">Students for Abundance</h1>
+            <p class="hero-location">Berkeley</p>
+            <p class="hero-tagline">We organize campus chapters across the country to renew institutions and rebuild the American Dream</p>
+            <div class="hero-ctas">
+                <a href="#join" class="btn btn-primary">Join us</a>
+                <a href="#what-we-believe" class="btn btn-secondary">Learn more</a>
+            </div>
         </div>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Who We Are -->
-        <section id="who-we-are" class="section">
+        <!-- Problem/Solution Section -->
+        <section class="mission-section">
             <div class="container">
-                <h2>Who We Are</h2>
-                <p>Content coming soon...</p>
+                <div class="mission-text">
+                    <p class="highlight-text">After generations of progress, young Americans are falling behind.</p>
+
+                    <p>We see a nation in decline, with not enough homes, energy, or healthcare to go around and a government that struggles to build more.</p>
+
+                    <p class="highlight-text">It shouldn't be this way.</p>
+
+                    <p>When there's not enough to go around, it can be tempting to hoard opportunity and mistake caution for wisdom. But we must resist those impulses. When the problem is that there isn't enough, the solution is to make more.</p>
+
+                    <p>Students for Abundance is shaping a generation of leaders to advance programs, policies, and infrastructure that expands opportunity.</p>
+
+                    <p class="highlight-text">We'd love for you to join us.</p>
+                </div>
             </div>
         </section>
 
-        <!-- What We Believe -->
-        <section id="what-we-believe" class="section">
+        <!-- Who We Are Section -->
+        <section id="who-we-are" class="content-section">
+            <div class="container">
+                <h2>Who We Are</h2>
+                <p>We're Berkeley students working to renew our institutions and rebuild the American Dream. Our chapter organizes students around policies and programs that expand abundance—more homes, energy, healthcare, and opportunity for everyone.</p>
+            </div>
+        </section>
+
+        <!-- What We Believe Section -->
+        <section id="what-we-believe" class="content-section alt">
             <div class="container">
                 <h2>What We Believe</h2>
-                <p>Content coming soon...</p>
+                <p>We believe that abundance is possible. We believe in building more, not redistributing scarcity. We believe young Americans deserve the opportunity to thrive in a nation that's growing and expanding for everyone.</p>
+            </div>
+        </section>
+
+        <!-- Supporters Section -->
+        <section class="supporters-section">
+            <div class="container">
+                <p class="supporters-text">Students for Abundance is supported by</p>
+                <div class="supporters-logos">
+                    <a href="https://www.niskanencenter.org/" target="_blank" class="supporter-link">Niskanen Center</a>
+                    <a href="https://www.abundancenetwork.com/" target="_blank" class="supporter-link">Abundance Network</a>
+                </div>
             </div>
         </section>
 
         <!-- Join Section -->
-        <section id="join" class="section join-section">
+        <section id="join" class="join-section">
             <div class="container">
-                <h2>Join Us</h2>
-                <p>Sign up to learn more about our chapter</p>
-                <form class="email-form">
-                    <input type="email" placeholder="your@email.com" required>
-                    <button type="submit">Submit</button>
-                </form>
+                <div class="join-content">
+                    <h2>Sign up for updates</h2>
+                    <p class="join-subtitle">Never spam, unsubscribe any time.</p>
+                    <form class="email-form" id="email-signup">
+                        <input type="email" placeholder="your@email.com" required>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Students for Abundance - Berkeley Chapter</p>
-            <p><a href="mailto:contact@berkeley.studentsforabundance.org">contact@berkeley.studentsforabundance.org</a></p>
+            <p class="copyright">&copy; Students for Abundance 2025</p>
+            <p class="contact-email">
+                <a href="mailto:contact@studentsforabundance.org">contact@studentsforabundance.org</a>
+            </p>
+            <p class="design-credit">
+                Brand and Design by <a href="https://www.connieliu.work/" target="_blank">Connie Liu</a>
+            </p>
         </div>
     </footer>
 

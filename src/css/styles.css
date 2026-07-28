@@ -5,14 +5,19 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #222;
+    background: #fff;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -20,164 +25,373 @@ body {
 /* Navigation */
 .navbar {
     background: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #eee;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
-.navbar .container {
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 20px;
 }
 
-.logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.brand-link {
+    font-size: 1.1rem;
+    font-weight: 600;
     color: #000;
     text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.brand-link:hover {
+    opacity: 0.7;
+}
+
+.brand-for {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0 0.25rem;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
+    align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #222;
+    font-size: 0.95rem;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #0066cc;
+    color: #666;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 2px;
+    background: #222;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 100px 20px;
+    background: #f5f5f5;
+    padding: 80px 20px;
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 3rem;
+.hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
     margin-bottom: 0.5rem;
+    letter-spacing: -1px;
 }
 
-.hero p {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+.hero-location {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
 }
 
-.hero .tagline {
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 1rem auto 2rem;
-    opacity: 0.95;
+.hero-tagline {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    font-weight: 500;
 }
 
-/* CTA Button */
-.cta-button {
+.hero-ctas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
     display: inline-block;
-    background: white;
-    color: #667eea;
-    padding: 12px 30px;
+    padding: 12px 28px;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
 }
 
-.cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+.btn-primary {
+    background: #000;
+    color: #fff;
 }
 
-/* Sections */
-.section {
-    padding: 60px 20px;
+.btn-primary:hover {
+    background: #333;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.btn-secondary:hover {
+    background: #f5f5f5;
+}
+
+/* Mission Section */
+.mission-section {
+    padding: 80px 20px;
     background: #fff;
 }
 
-.section:nth-child(even) {
-    background: #f8f9fa;
+.mission-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #333;
 }
 
-.section h2 {
-    font-size: 2rem;
+.mission-text p {
     margin-bottom: 1.5rem;
 }
 
-.join-section {
+.highlight-text {
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 80px 20px;
+    background: #fff;
+}
+
+.content-section.alt {
+    background: #f9f9f9;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.content-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+    max-width: 800px;
+}
+
+/* Supporters Section */
+.supporters-section {
+    padding: 60px 20px;
+    background: #f9f9f9;
     text-align: center;
 }
 
-/* Form */
+.supporters-text {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.supporters-logos {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.supporter-link {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.supporter-link:hover {
+    color: #0052a3;
+}
+
+/* Join Section */
+.join-section {
+    padding: 80px 20px;
+    background: #fff;
+}
+
+.join-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.join-content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.join-subtitle {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+/* Email Form */
 .email-form {
     display: flex;
     gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 2rem;
 }
 
 .email-form input {
-    padding: 12px 15px;
+    padding: 12px 16px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 1rem;
-    min-width: 250px;
+    font-family: inherit;
+    min-width: 280px;
+    transition: border-color 0.3s;
 }
 
-.email-form button {
-    padding: 12px 30px;
-    background: #667eea;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.email-form button:hover {
-    background: #764ba2;
+.email-form input:focus {
+    outline: none;
+    border-color: #000;
 }
 
 /* Footer */
-footer {
-    background: #333;
-    color: white;
+.footer {
+    background: #222;
+    color: #fff;
+    padding: 60px 20px;
     text-align: center;
-    padding: 2rem 20px;
 }
 
-footer a {
-    color: #667eea;
+.footer .container {
+    max-width: 800px;
+}
+
+.copyright {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.contact-email {
+    margin-bottom: 1.5rem;
+}
+
+.contact-email a {
+    color: #0088ff;
     text-decoration: none;
 }
 
-footer a:hover {
+.contact-email a:hover {
+    text-decoration: underline;
+}
+
+.design-credit {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.design-credit a {
+    color: #0088ff;
+    text-decoration: none;
+}
+
+.design-credit a:hover {
     text-decoration: underline;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-tagline {
+        font-size: 1.05rem;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        align-items: center;
     }
 
     .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
         gap: 1rem;
-        font-size: 0.9rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .mission-text {
+        font-size: 1rem;
+    }
+
+    .highlight-text {
+        font-size: 1.05rem;
     }
 
     .email-form input {
         min-width: 100%;
+    }
+
+    .supporters-logos {
+        gap: 1rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.75rem;
     }
 }

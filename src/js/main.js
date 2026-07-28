@@ -1,3 +1,20 @@
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+}
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -9,15 +26,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission
-const emailForm = document.querySelector('.email-form');
+// Email form submission
+const emailForm = document.querySelector('#email-signup');
 if (emailForm) {
     emailForm.addEventListener('submit', function(e) {
         e.preventDefault();
         const email = this.querySelector('input[type="email"]').value;
         console.log('Email submitted:', email);
-        // Add your email handling logic here
-        alert('Thank you for signing up! Check your email for more info.');
+        // TODO: Connect to email service (Mailchimp, etc.)
+        alert('Thank you for signing up! We\'ll be in touch soon.');
         this.reset();
     });
 }
