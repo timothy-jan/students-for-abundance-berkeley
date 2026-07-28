@@ -6,7 +6,8 @@
       "Bash(git commit *)",
       "Bash(python -m http.server 8080)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/index.html)",
-      "Bash(git commit -m 'Polish hero illustration, banner color, and nav brand *)"
+      "Bash(git commit -m 'Polish hero illustration, banner color, and nav brand *)",
+      "Bash(git commit -m 'Extend color scheme site-wide and fix layout inconsistencies *)"
     ]
   }
 }
