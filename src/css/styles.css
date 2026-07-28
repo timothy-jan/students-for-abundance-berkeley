@@ -181,7 +181,7 @@ body {
     font-size: 4rem;
     font-weight: 700;
     color: var(--olive);
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.15rem;
     letter-spacing: -1px;
 }
 
@@ -190,7 +190,7 @@ body {
     font-size: 1.5rem;
     color: var(--olive);
     opacity: 0.8;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.15rem;
     font-weight: 700;
 }
 
