@@ -10,7 +10,8 @@
       "Bash(git commit -m 'Extend color scheme site-wide and fix layout inconsistencies *)",
       "Bash(git commit -m 'Fix hero background seam and rebalance skyline composition *)",
       "Bash(git commit -m 'Add BART station, tighten hero spacing, fix section rhythm *)",
-      "Bash(git commit -m 'Even out hero title/location spacing and swap tagline to placeholder *)"
+      "Bash(git commit -m 'Even out hero title/location spacing and swap tagline to placeholder *)",
+      "Bash(git commit -m 'Add Team and Events pages, widen nav for larger screens *)"
     ]
   }
 }
