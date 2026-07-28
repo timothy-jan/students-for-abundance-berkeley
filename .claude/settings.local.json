@@ -8,7 +8,8 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/index.html)",
       "Bash(git commit -m 'Polish hero illustration, banner color, and nav brand *)",
       "Bash(git commit -m 'Extend color scheme site-wide and fix layout inconsistencies *)",
-      "Bash(git commit -m 'Fix hero background seam and rebalance skyline composition *)"
+      "Bash(git commit -m 'Fix hero background seam and rebalance skyline composition *)",
+      "Bash(git commit -m 'Add BART station, tighten hero spacing, fix section rhythm *)"
     ]
   }
 }

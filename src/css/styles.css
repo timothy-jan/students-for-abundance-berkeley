@@ -180,7 +180,7 @@ body {
     font-size: 4rem;
     font-weight: 700;
     color: var(--olive);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.1rem;
     letter-spacing: -1px;
 }
 
@@ -189,7 +189,7 @@ body {
     font-size: 1.5rem;
     color: var(--olive);
     opacity: 0.8;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.4rem;
     font-weight: 700;
 }
 
@@ -244,8 +244,12 @@ body {
 
 /* Content Sections */
 .content-section {
-    padding: 80px 20px;
+    padding: 55px 20px;
     background: #fff;
+}
+
+main > .content-section:first-of-type {
+    padding-top: 40px;
 }
 
 .content-section.alt {
@@ -269,8 +273,9 @@ body {
 
 /* Supporters Section */
 .supporters-section {
-    padding: 60px 20px;
+    padding: 50px 20px;
     background: var(--gold-pale);
+    border-top: 1px solid var(--border-warm);
     text-align: center;
 }
 
