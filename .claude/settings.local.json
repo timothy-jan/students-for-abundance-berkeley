@@ -11,7 +11,16 @@
       "Bash(git commit -m 'Fix hero background seam and rebalance skyline composition *)",
       "Bash(git commit -m 'Add BART station, tighten hero spacing, fix section rhythm *)",
       "Bash(git commit -m 'Even out hero title/location spacing and swap tagline to placeholder *)",
-      "Bash(git commit -m 'Add Team and Events pages, widen nav for larger screens *)"
+      "Bash(git commit -m 'Add Team and Events pages, widen nav for larger screens *)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "Bash(gh repo *)",
+      "Bash(vercel --version)",
+      "Bash(vercel whoami *)",
+      "Bash(vercel login *)",
+      "Bash(vercel --yes)",
+      "Bash(vercel link *)",
+      "Bash(vercel --prod --yes)"
     ]
   }
 }
