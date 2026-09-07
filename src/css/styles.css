@@ -585,6 +585,7 @@ main > .content-section:first-of-type {
     font-size: 1.7rem;
     font-weight: 700;
     color: var(--olive-dark);
+    object-fit: cover;
 }
 
 .team-card h3 {
