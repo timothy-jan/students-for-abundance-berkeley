@@ -561,7 +561,15 @@ main > .content-section:first-of-type {
 }
 
 .team-card {
+    display: block;
     text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s;
+}
+
+.team-card[href]:hover {
+    opacity: 0.75;
 }
 
 .team-avatar {
@@ -589,6 +597,86 @@ main > .content-section:first-of-type {
 .team-card .team-role {
     color: var(--text-muted);
     font-size: 0.88rem;
+}
+
+.team-intro {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-blurb {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--text-muted);
+    margin: 0.5rem 0 0.9rem;
+}
+
+.team-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.team-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s;
+    width: 100%;
+    max-width: 160px;
+}
+
+.team-btn-linkedin {
+    background: #eef2e6;
+    color: var(--olive);
+    border: 1px solid rgba(79, 106, 29, 0.3);
+}
+
+.team-btn-linkedin:hover {
+    background: var(--olive);
+    color: #fff;
+}
+
+.li-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    background: currentColor;
+    position: relative;
+}
+
+.li-badge::after {
+    content: "in";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--gold-pale);
+    font-family: var(--font-body);
+}
+
+.team-btn-coffee {
+    background: var(--olive);
+    color: #fff;
+}
+
+.team-btn-coffee:hover {
+    background: var(--olive-dark);
 }
 
 .placeholder-note {
